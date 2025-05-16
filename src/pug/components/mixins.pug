@@ -1,0 +1,49 @@
+mixin header-line()
+    .header-line
+        .wrapper.d-flex.flex-between.items-center
+            div.d-flex.items-center
+                span.logo-text.pink-text Business Coach
+                nav.header-navigation 
+                    ul.d-flex.items-center
+                        li
+                            a(href="#") about me
+                        li
+                            a(href="#") programs
+                        li
+                            a(href="#") terms of use
+                        li
+                            a(href="#") privacy
+                        li
+                            a(href="#") contact
+            a(href="#").button.button-border contact me
+
+
+mixin program-card(img, title)
+    .col-12.col-md-4.col-lg-3
+        figure.program-card
+            img(src=img, alt=title)
+            figcaption.d-flex.flex-between.items-center
+                strong= title
+                a(href="#").button.button-border info
+
+mixin footer()
+    footer
+        .wrapper
+            h3 contact
+            ul
+                li.phone
+                    a(href="tel:+972557717418") +972-55-7717418
+                li.phone
+                    a(href="tel:+380682050757") +380-68-2050757
+                li.email
+                    a(href="mailto:Genwug@gmail.com") Genwug@gmail.com
+                li.pin
+                    a(href="#") Israel, Revava
+            .privacy 
+                ul
+                    li
+                        a(href="#") terms of use
+                    li
+                        a(href="#") Privacy policy
+            .copy 
+                p &copy; all right reserved
