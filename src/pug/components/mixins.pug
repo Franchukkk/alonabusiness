@@ -1,25 +1,42 @@
 mixin header-line()
-    .header-line
+    .header-line.d-flex.items-center
         .wrapper.d-flex.flex-between.items-center
             div.d-flex.items-center
                 span.logo-text.pink-text Business Coach
                 nav.header-navigation 
                     ul.d-flex.items-center
                         li
-                            a(href="#") about me
+                            a(href="#about") about me
                         li
-                            a(href="#") programs
+                            a(href="#programs") programs
                         li
                             a(href="#") terms of use
                         li
                             a(href="#") privacy
                         li
                             a(href="#") contact
-            a(href="#").button.button-border contact me
+            a(href="#").button.button-border.contact-me contact me
+            .burger
+                span 
+                span 
+                span 
+    .burger-navigation
+        ul 
+            li
+                a(href="#about") about me
+            li
+                a(href="#programs") programs
+            li
+                a(href="#") terms of use
+            li
+                a(href="#") privacy
+            li
+                a(href="#") contact
+
 
 
 mixin program-card(img, title)
-    .col-12.col-md-4.col-lg-3
+    .col-12.col-sm-6.col-md-6.col-lg-3
         figure.program-card
             img(src=img, alt=title)
             figcaption.d-flex.flex-between.items-center
@@ -30,7 +47,7 @@ mixin footer()
     footer
         .wrapper
             h3 contact
-            ul
+            ul.footer-contacts
                 li.phone
                     a(href="tel:+972557717418") +972-55-7717418
                 li.phone
@@ -43,6 +60,7 @@ mixin footer()
                 ul
                     li
                         a(href="#") terms of use
+                    li.line
                     li
                         a(href="#") Privacy policy
             .copy 

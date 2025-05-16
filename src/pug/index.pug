@@ -11,72 +11,73 @@ html(lang="en")
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     body 
-        include components/mixins
-        header 
-            +header-line()
-            section.first-screen
-                .wrapper.d-flex.items-center.flex-between
-                    .text-block(data-aos="fade-right")
-                        h1 I'm a business coach who helps entrepreneurs grow...
-                        h2 Together, we bring order to chaos, turn ideas into strategies, and 
-                            span.pink-text transform vision into results. 
-                        .buttons.d-flex.items-center
-                            a(href="#").button.button-white contact me
-                            a(href="#").button-transparent my programs
-                    img(src="img/woman.webp", alt="")(data-aos="fade-left")
-        main.wrapper
-            section.skills.row.g-3
-                .col-12.col-md-6.col-lg-4(data-aos="fade-up" data-aos-delay="0")
-                    .advantage.d-flex.items-center
-                        .advantage-content.d-flex.items-center
-                            img(src="img/sales.svg", alt="")
-                            div
-                                h3 Sales Department Management
-                                p I can help build high-performing sales teams, streamline processes, and implement systems that boost conversion and revenue — sustainably and predictably.
-                .col-12.col-md-6.col-lg-4(data-aos="fade-up" data-aos-delay="200")
-                    .advantage.advantage-pink.d-flex.items-center
-                        .advantage-content.d-flex.items-center
-                            img(src="img/hr.svg", alt="")
-                            div
-                                h3 HR &amp; Team Motivation
-                                p I will empower your team with clear goals, smart leadership, and a culture that drives loyalty and productivity. Because a strong business starts with inspired people.
-                .col-12.col-md-6.col-lg-4(data-aos="fade-up" data-aos-delay="400")
-                    .advantage.d-flex.items-center
-                        .advantage-content.d-flex.items-center
-                            img(src="img/recruitment.svg", alt="")
-                            div
-                                h3 Recruitment &amp; Onboarding Systems
-                                p Attract the right talent and set them up for success from day one. We design recruitment funnels and onboarding strategies that save time and reduce turnover.
-            section.info 
-                .row.g-5
-                    .col-12.col-md-6.col-lg-4(data-aos="fade-right")
-                       img(src="img/info.jpg", alt="").w-100
-                    .col-12.col-md-6.col-lg-8(data-aos="fade-left")
-                        h2 Founder of Professional Training 
-                            span.pink-text since 2020
+        .overflow-x-hidden
+            include components/mixins
+            header 
+                +header-line()
+                section.first-screen
+                    .wrapper.d-flex.items-center.flex-between
+                        .text-block(data-aos="fade-right")
+                            h1 I'm a business coach who helps entrepreneurs grow...
+                            h2 Together, we bring order to chaos, turn ideas into strategies, and 
+                                span.pink-text transform vision into results. 
+                            .buttons.d-flex.items-center
+                                a(href="#").button.button-white contact me
+                                a(href="#").button-transparent my programs
+                        img(src="img/woman.webp", alt="")(data-aos="fade-left")
+            main.wrapper
+                section.skills.row.g-3
+                    .col-12.col-md-6.col-lg-4(data-aos="fade-up" data-aos-delay="0")
+                        .advantage.d-flex.items-center
+                            .advantage-content.d-flex.items-center
+                                img(src="img/sales.svg", alt="")
+                                div
+                                    h3 Sales Department Management
+                                    p I can help build high-performing sales teams, streamline processes, and implement systems that boost conversion and revenue — sustainably and predictably.
+                    .col-12.col-md-6.col-lg-4(data-aos="fade-up" data-aos-delay="200")
+                        .advantage.advantage-pink.d-flex.items-center
+                            .advantage-content.d-flex.items-center
+                                img(src="img/hr.svg", alt="")
+                                div
+                                    h3 HR &amp; Team Motivation
+                                    p I will empower your team with clear goals, smart leadership, and a culture that drives loyalty and productivity. Because a strong business starts with inspired people.
+                    .col-12.col-md-6.col-lg-4(data-aos="fade-up" data-aos-delay="400")
+                        .advantage.d-flex.items-center
+                            .advantage-content.d-flex.items-center
+                                img(src="img/recruitment.svg", alt="")
+                                div
+                                    h3 Recruitment &amp; Onboarding Systems
+                                    p Attract the right talent and set them up for success from day one. We design recruitment funnels and onboarding strategies that save time and reduce turnover.
+                section.info#about 
+                    .row.g-5
+                        .col-12.col-md-12.col-lg-4(data-aos="fade-right")
+                            img(src="img/info.jpg", alt="").w-100
+                        .col-12.col-md-12.col-lg-8(data-aos="fade-left")
+                            h2 Founder of Professional Training 
+                                span.pink-text since 2020
 
-                        p I specialize in Organizational Development Coaching and help companies grow through:
-                        ul
-                            li Strategic sessions & building a step-by-step business plan
-                            li Executive coaching for C-level leaders: management development, team handling, effective decision-making, burnout prevention
-                            li Sales department audit & systemization
-                            li HR systems: performance evaluation, motivation & training structures
-                            li Burnout diagnostics & recovery strategies for teams
-                        a(href="#").button.button-black more about me
+                            p I specialize in Organizational Development Coaching and help companies grow through:
+                            ul
+                                li Strategic sessions & building a step-by-step business plan
+                                li Executive coaching for C-level leaders: management development, team handling, effective decision-making, burnout prevention
+                                li Sales department audit & systemization
+                                li HR systems: performance evaluation, motivation & training structures
+                                li Burnout diagnostics & recovery strategies for teams
+                            a(href="#").button.button-black more about me
 
-            section.programs 
-                p(data-aos="fade-up") I present to you
-                h2(data-aos="fade-up") my 
-                    span.pink-text best 
-                    | programs
-                .row 
-                    +program-card("img/program1.jpg", "Sales Department Management")(data-aos="fade-up" data-aos-delay="0")
-                    +program-card("img/program2.jpg", "HR & Team Motivation")(data-aos="fade-up" data-aos-delay="200")
-                    +program-card("img/program3.jpg", "Recruitment & Onboarding Systems")(data-aos="fade-up" data-aos-delay="400")
-                    +program-card("img/program4.jpg", "Time Management & Productivity")(data-aos="fade-up" data-aos-delay="600")
-                .d-flex.flex-end
-                    a(href="#").button.button-black(data-aos="fade-up") see more...
-        +footer()
+                section.programs#programs
+                    p(data-aos="fade-up") I present to you
+                    h2(data-aos="fade-up") my 
+                        span.pink-text best 
+                        | programs
+                    .row 
+                        +program-card("img/program1.jpg", "Sales Department Management")(data-aos="fade-up" data-aos-delay="0")
+                        +program-card("img/program2.jpg", "HR & Team Motivation")(data-aos="fade-up" data-aos-delay="200")
+                        +program-card("img/program3.jpg", "Recruitment & Onboarding Systems")(data-aos="fade-up" data-aos-delay="400")
+                        +program-card("img/program4.jpg", "Time Management & Productivity")(data-aos="fade-up" data-aos-delay="600")
+                    .d-flex.flex-end
+                        a(href="#").button.button-black see more...
+            +footer()
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -85,3 +86,5 @@ html(lang="en")
                 duration: 1000,
                 once: true
             });
+
+        script(src="js/scripts.js") 
