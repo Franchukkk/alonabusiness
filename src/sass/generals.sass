@@ -70,7 +70,7 @@ header
     justify-content: center
     width: 100%
     height: calc(100vh - 6rem)
-    bottom: 0
+    top: 6rem
     left: 0
     opacity: 0
     background-color: #FF40BF
@@ -368,6 +368,7 @@ header
         color: #121212
         font-size: 2rem
         font-weight: 900
+        margin-bottom: 2.8rem
         +media(600)
             font-size: 2.5rem
         +media(991)
@@ -383,13 +384,16 @@ header
         margin-bottom: 2.8rem
 
 .programs 
-    margin-bottom: 9.375rem
+    margin-bottom: 5rem
+    +media(991)
+        margin-bottom: 9.375rem
     p
         text-align: center
         color: rgba(18, 18, 18, 0.50)
         font-size: 1.25rem
         font-weight: 900
         line-height: 1.375rem
+        margin-bottom: 0.2rem
 
     h2
         color: #121212
@@ -452,7 +456,7 @@ footer
 footer
     ul
         list-style: none
-        padding-left: 1.8rem
+        padding-left: 28px
     a, li
         text-decoration: none
         color: #FFF
@@ -467,9 +471,9 @@ footer
         content: ''
         position: absolute
         top: 0
-        left: -1.8rem
-        width: 1.5rem
-        height: 1.5rem
+        left: -28px
+        width: 24px
+        height: 24px
 
 .phone::before
     background-image: url(../img/phone.svg)
